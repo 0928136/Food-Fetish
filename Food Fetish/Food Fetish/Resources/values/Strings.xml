@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Food Fetish</string>
+
+  <string name="settingsBtn">Settings</string>
+  
+  <string name="settings_home">Settings</string>
+</resources>
