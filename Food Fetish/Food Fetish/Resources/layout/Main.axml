@@ -11,24 +11,24 @@
         android:id="@+id/MenuBar"
         android:weightSum="100"
         android:layout_weight="10"
-        android:background="@drawable/menubottomborder" >
-      <Button
-        android:layout_height="match_parent"
-        android:layout_width="0dp"
-        android:layout_weight="20"
-        android:id="@+id/MenuButton"
-        android:text ="|||"
-        android:textColor="#FFFFFF"
-        android:rotation="-90"
-        android:layout_margin="0dp"/>
-      <TextView
-        android:layout_height="match_parent"
-        android:layout_width="0dp"
-        android:layout_weight="80"
-        android:text="@string/app_name"
-        android:gravity="center"
-        android:textSize="18sp"
-        android:textColor="#cccccc"/>
+        android:background="@drawable/menubottomborder">
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:id="@+id/MenuButton"
+            android:textColor="#FFFFFF"
+            android:gravity="top|center_horizontal"
+            android:text="__\n__\n__"
+            android:lineSpacingExtra="-12dp"/>
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="80"
+            android:text="@string/app_name"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="#cccccc" />
     </LinearLayout>
     <LinearLayout
         android:orientation="vertical"
