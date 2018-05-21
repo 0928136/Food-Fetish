@@ -2,17 +2,39 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-  <Button
-    android:text="@string/settingsBtn"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/settingsBtn"/>
-  <Button
-    android:text="Hello there"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/button2"
-    android:background="@android:color/holo_blue_light"
-    />
+    android:layout_height="match_parent"
+    android:weightSum="100">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/MenuBar"
+        android:weightSum="100"
+        android:layout_weight="10"
+        android:background="@drawable/menubottomborder" >
+      <Button
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="20"
+        android:id="@+id/MenuButton"
+        android:text ="|||"
+        android:textColor="#FFFFFF"
+        android:rotation="-90"
+        android:layout_margin="0dp"/>
+      <TextView
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="80"
+        android:text="@string/app_name"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="#cccccc"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/MainContent"
+        android:layout_weight="90"
+        android:background="#4d4d4d" />
 </LinearLayout>

@@ -8,30 +8,23 @@ using Android.OS;
 
 namespace Food_Fetish
 {
-    [Activity(Label = "Food_Fetish", MainLauncher = true, Icon = "@mipmap/icon")]
+    [Activity(Label = "Food_Fetish", MainLauncher = true)]
     public class MainActivity : Activity
     {
+        Button MenuButton;
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            RequestWindowFeature(WindowFeatures.NoTitle);
+            RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
             base.OnCreate(savedInstanceState);
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
-            int clicks = 0;
 
-            //Get the ID's from the layout
-            Button settingsButton = FindViewById<Button>(Resource.Id.settingsBtn);
-            Button helloButton = FindViewById<Button>(Resource.Id.button2);
-            settingsButton.Click += delegate
-            {
-                SetContentView(Resource.Layout.Settings);
-            };
-            helloButton.Click += delegate
-            {
-                clicks++;
-                string clicksString = clicks.ToString();
-                helloButton.Text = $"You clicked me :{clicksString})";
-            };
+            // Assign ID's
+            MenuButton = FindViewById<Button>(Resource.Id.MenuButton);
+
+
         }
     }
 }
